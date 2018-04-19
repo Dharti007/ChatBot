@@ -33,8 +33,17 @@ app.post('/webhook', function (req, res) {
   var webhookReply = 'Hello dharti '
 
   res.status(200).json({
-    source: 'webhook',
-    speech: webhookReply,
-    displayText: webhookReply
+    "fulfillmentText": "This is a sample response from your webhook!"
+    ,"fulfillmentMessages":[
+        {
+            "text": {
+                "text": [
+                    "Hello I m Responding to intent"
+                ]
+            }
+        }
+    ]
+    ,"source":""
+}
   })
 })
