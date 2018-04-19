@@ -26,11 +26,11 @@ app.post('/webhook', function (req, res) {
   //   return res.status(401).send('Unauthorized')
   // }
   // }
-  if (!req.body || !req.body.result || !req.body.result.parameters) {
+  if (!req.body || !req.body.queryResult || !req.body.queryResult.parameters) {
     return res.status(400).send('Bad Request')
   }
 
-  var webhookReply = 'Hello user '
+  var webhookReply = 'Hello dharti '
 
   res.status(200).json({
     source: 'webhook',
